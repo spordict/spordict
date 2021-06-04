@@ -372,7 +372,9 @@ body {
 	left: 0;
 	background: url('https://images.unsplash.com/photo-1587385789097-0197a7fbd179?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMDk5OTI2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-position: center;
+	background-size: 125% auto;
+	background-color: #000;
 }
 
 .split.left::before {
@@ -388,6 +390,7 @@ body {
 	right: 0;
 	background: url('https://images.unsplash.com/photo-1565787154274-c8d076ad34e7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMDk5OTYy&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');
 	background-repeat: no-repeat;
+	background-position: center;
 	background-size: cover;
 }
 
@@ -397,7 +400,16 @@ body {
 	width: 100%;
 	height: 100%;
 	background-color: var(--secondary-color);
-	opacity: 0.7;
+	opacity: 0.5;
+}
+
+.container.show-nav .split.right::before {
+	background-color: var(--primary-color);
+}
+
+.container.show-nav .split.left::before {
+	background-color: var(--secondary-color);
+	opacity: 0.3;
 }
 
 .split.right,
@@ -429,6 +441,10 @@ body {
 		top: 27%;
 	}
 
+	.container.show-nav .split-container h1 {
+		font-size: 1.5rem;
+	}
+
 	.split-container .btn {
 		padding: 1.2rem;
 		width: 12rem;
@@ -441,8 +457,53 @@ body {
 		top: 15%;
 	}
 
+	.container.show-nav .split-container h1 {
+		font-size: 1.5rem;
+	}
+
 	.split-container .btn {
 		padding: 1.2rem;
 		width: 12rem;
 	}
+}
+
+/* Live Score Card CSS */
+.match {
+	text-align: center;
+	width: 60%;
+	margin: 3rem auto;
+	border-radius: 25px;
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.text-span {
+	display: block;
+	margin: 2%;
+	width: auto;
+}
+
+.team-s {
+	text-align: left;
+	font-size: 95%;
+	font-weight: bolder;
+}
+
+.score-s {
+	text-align: right;
+}
+
+.row {
+	margin-top: 1%;
+}
+
+.status-s {
+	font-size: 100%;
+	font-weight: bold;
+	text-align: left;
+}
+
+.location-s {
+	font-size: 80%;
+	text-align: left;
 }

@@ -1,185 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--Google Fonts Links-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-
-  <!-- Favicon-->
-  <link rel="icon" href="src/img/favicon.ico">
-
-  <!--Google Fonts-->
-  <!-- <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet"> -->
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/cricket.css">
-
-  <!-- JavaScript File -->
-  <script src="/src/script/script.js"></script>
-
-
-
-  <!-- Bootstarp Script -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a73c0e39ac.js" crossorigin="anonymous"></script>
-  <title>Spordict - Cricket</title>
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> -->
-
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome CSS CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
 </head>
 
 <body>
-  <!-- Navbar -->
-  <div class="container-fluid">
-    <nav class="navbar  navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="index.html"><span class="mb-0 h1">spordict</span></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">Home</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">Matches</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="cricket.html">Cricket</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">More Coming Soon...</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./help.html">Help</a>
-          </li>
-        </ul>
+  <!-- <div class="container ">
+        
+        </div> -->
+  <div class="container">
+    <div>
+      <div id="mySidenav" class="sidenav ">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./cricket.html">Matches</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./helpt.html">Help</a>
       </div>
-    </nav>
-  </div>
 
+      <!-- Use any element to open the sidenav -->
+      <div class="circle-container" id="nav-toggle">
+        <div class="circle">
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
 
-
-
-
-
-
-
-
-
-
-
-
-  <!-- ------Match Scorecard Use if API-------- -->
-
-  <div class="match">
-    <span class="text-span">
-      <p class="status-s">LIVE</p>
-    </span>
-    <span class="text-span">
-      <p class="location-s"><strong class="location-s">T20 <span>&#183;</span> </strong> Wankhede Stadium, Mumbai</p>
-    </span>
-
-    <span class="text-span">
-      <div class="row">
-        <div class="col-6 team-s ">Chennai Super Kings</div>
-        <div class="col-6 score-s">4/0(1.0)</div>
+          <button id='open'>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-6 team-s ">Kolkata Knight Riders</div>
-        <div class="col-6 score-s"></div>
+      <div class="brand-name">
+        <h1>spordict</h1>
       </div>
-    </span>
-    <span class="text-span">
-      <p class="status-match">Royal Challengers Bangalore won by 2 Wickets.</p>
-    </span>
+    </div>
+    <!-- .main class for content of the page -->
+
+    <div class="main">
+      <div class="match">
+        <span class="text-span">
+          <p class="status-s">LIVE</p>
+        </span>
+        <span class="text-span">
+          <p class="location-s"><strong class="location-s">T20 <span>&#183;</span> </strong> Wankhede Stadium, Mumbai
+          </p>
+        </span>
+
+        <span class="text-span">
+          <div class="row">
+            <div class="col-6 team-s ">Chennai Super Kings</div>
+            <div class="col-6 score-s">4/0(1.0)</div>
+          </div>
+          <div class="row">
+            <div class="col-6 team-s ">Kolkata Knight Riders</div>
+            <div class="col-6 score-s"></div>
+          </div>
+        </span>
+        <span class="text-span">
+          <p class="status-match">Royal Challengers Bangalore won by 2 Wickets.</p>
+        </span>
+
+      </div>
+
+    </div>
 
   </div>
-
-  <div class="match">
-    <span class="text-span">
-      <p class="status-s">RESULT</p>
-    </span>
-    <span class="text-span">
-      <p class="location-s"><strong class="location-s">T20 <span>&#183;</span> </strong> MA Chidambaram Stadium,
-        Chepauk, Chennai</p>
-    </span>
-
-    <span class="text-span">
-      <div class="row">
-        <div class="col-6 team-s ">Punjab Kings</div>
-        <div class="col-6 score-s">120(19.4)</div>
-      </div>
-      <div class="row">
-        <div class="col-6 team-s ">Sunrisers Hyderabad</div>
-        <div class="col-6 score-s">121/1(18.4)</div>
-      </div>
-    </span>
-    <span class="text-span">
-      <p class="status-match">Royal Challengers Bangalore won by 2 Wickets.</p>
-    </span>
-
-  </div>
+  <footer class="footer">
+    <div class="footer-brand">
+      <h1>sportdict</h1>
+    </div>
+    <div class="footer-middle">
+      <h2>Navigate</h2>
+      <a href="./index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./cricket.html">Matches</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./helpt.html">Help</a>
+    </div>
+    <div class="footer-last">
+      <h2>Social</h2>
+      <a href="https://github.com/spordict/" target="_blank"><i class="fab fa-github"></i> <span>GitHub</span></a>
+      <a href="https://www.instagram.com/spordict/" target="_blank"><i class="fab fa-instagram"></i>
+        <span>Instagram</span></a>
+    </div>
+  </footer>
 
 
-
-
+  <script src="./src/script/script.js"></script>
 </body>
-<!-- Match Live Score Carousel Design Pattern -->
-<!-- <div class="match-info">
-  <div class="status"></div>
-  <div class="description"></div>
-  <div class="teams">
-   <div class="team"></div>
-   <div class="team"></div>     
-  </div>
-  <div class="status-text"></div>
- </div> -->
 
-
-<!-- Carousol Slider Element using Span and p tag only  -->
-<!-- <div class="match"> -->
-<!-- A span for match status,
-   if the match is completed then it will show RESULT, 
-   if match is LIVE then it will show LIVE and 
-  if the match is not started then it will show the 
- starting time of the match -->
-<!-- <span class="text-span"><p class="status-s">LIVE</p></span> -->
-<!-- This span is for Location of the match. and the type of match like T20 ODI or test  -->
-<!-- <span class="text-span"><p class="location-s">Bangalore</p></span> -->
-<!-- This span is for the first team according to the schedule 
-  or we can say HOME TEAM.  -->
-<!-- <span class="text-span"><p class="team-s">Mumbai Indians</p><span><p class="score-p right">159/8</p></span></span> -->
-<!-- This span is for the away or 
-    the second team listed in the schedule. 
-    The information is showed with score along with win symbol 
-  the win symbol is lacated after the winning team i;n the match.-->
-<!-- <span class="text-span"><p class="team-s">Royal Challengers Banlgalore</p><span><p class="score-p right">160/7</p></span></span> -->
-<!-- This is for the match status .i.e,
-     which team is won and by what margin 
-    if it is not started yet than the message for the user is displayed.  -->
-<!-- <span class="text-span"><p class="status-text-s">Royal Challengers Banlgalore won by 3 wickets</p></span>
-  </div> -->
+</html>

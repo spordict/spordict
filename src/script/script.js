@@ -4,7 +4,9 @@ var sideNavContainer = document.querySelector('.container')
 var footer = document.querySelector('.footer')
 navToggle.addEventListener('click', () => {
 	sideNavContainer.classList.toggle('show-nav')
-	footer.classList.toggle('show-nav')
+	if (footer != null) {
+		footer.classList.toggle('show-nav')
+	}
 })
 
 //Split CSS functioning
@@ -13,21 +15,20 @@ const splitLeft = document.querySelector('.left')
 const splitRight = document.querySelector('.right')
 const splitContainer = document.querySelector('.split-container')
 if (splitContainer != null) {
-	footer.style.display = 'none'
-}
-splitLeft.addEventListener('mouseenter', () =>
-	splitContainer.classList.add('hover-left')
-)
-splitLeft.addEventListener('mouseleave', () =>
-	splitContainer.classList.remove('hover-left')
-)
+	splitLeft.addEventListener('mouseenter', () =>
+		splitContainer.classList.add('hover-left')
+	)
+	splitLeft.addEventListener('mouseleave', () =>
+		splitContainer.classList.remove('hover-left')
+	)
 
-splitRight.addEventListener('mouseenter', () =>
-	splitContainer.classList.add('hover-right')
-)
-splitRight.addEventListener('mouseleave', () =>
-	splitContainer.classList.remove('hover-right')
-)
+	splitRight.addEventListener('mouseenter', () =>
+		splitContainer.classList.add('hover-right')
+	)
+	splitRight.addEventListener('mouseleave', () =>
+		splitContainer.classList.remove('hover-right')
+	)
+}
 
 // function openNav() {
 // 	document.getElementById('mySidenav').style.width = '250px'
