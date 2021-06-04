@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+:root {
+	--primary-color: #064579;
+	--secondary-color: #aaccff;
+	/* --right-bg-color: rgba(255, 255, 0, 0.4);
+	--left-bg-color: rgba(43, 43, 43, 0.8); */
+	/* --right-btn-hover-color: rgba(0, 0, 0, 0.8);
+	--left-btn-hover-color: rgba(255, 255, 0, 0.8); */
+	--hover-width: 75%;
+	--other-width: 25%;
+	--speed: 1000ms;
+}
+
+* {
+	margin: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+/* Additional CSS */
+.circle-container {
+	position: fixed;
+	background-color: var(--primary-color);
+	z-index: 1;
+	height: 50px;
+	width: 50px;
+	border-radius: 5%;
+	margin-left: 10px;
+	margin-top: 1rem;
+}
+
+.circle button {
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	background-color: transparent;
+	color: #fff;
+	border: none;
+	position: absolute;
+}
+
+/* The side navigation menu */
+.sidenav {
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0;
+	background-color: var(--primary-color); /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* All navigation bar contents  */
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #fff;
+	display: block;
+	transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+	color: var(--secondary-color);
+}
+
+/* Position and style the close button (top right corner) */
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+.main {
+	transition: margin-left 0.5s;
+	margin: 10rem 0 5% 0;
+	display: flex;
+	justify-content: space-evenly;
+	width: calc(100%-250px);
+	padding-bottom: 3rem;
+}
+
+.sidenav {
+	width: 0;
+}
+
+.container.show-nav .main {
+	margin-left: 250px;
+}
+
+.container.show-nav .sidenav {
+	width: 250px;
+}
+
+#close {
+	transform: translateX(-500px);
+	transition: ease-in 0.3s linear;
+}
+
+.container.show-nav #open {
+	transform: translateX(-500px);
+}
+
+.container.show-nav #close {
+	transform: translateX(0);
+}
+
+.container.show-nav .circle {
+	position: absolute;
+	top: 0;
+	font-size: 36px;
+	margin-left: 180px;
+	transition: 0.6s;
+}
+
+.container.show-nav .footer-brand {
+	position: relative;
+}
+
+.container.show-nav .footer-brand h1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: auto;
+}
+
+.brand-name {
+	font-weight: 100;
+	font-size: 16px;
+	padding-right: 40px;
+	position: fixed;
+	top: 1rem;
+	left: auto;
+	right: 5%;
+	color: var(--primary-color);
+}
+
+/* Footer CSS */
+
+.footer {
+	display: flex;
+	background-color: var(--primary-color);
+	color: #fff;
+	justify-content: space-between;
+	min-width: 100%;
+	z-index: 2;
+	margin-top: auto;
+}
+
+.footer-brand,
+.footer-middle,
+.footer-last {
+	width: 30%;
+	margin: 1.5%;
+	text-align: left;
+}
+
+/* Main content CSS */
+
+.main .page-intro {
+	width: 30%;
+}
+.main .page-content {
+	width: 35%;
+	align-self: center;
+}
+
+.page-content p {
+	font-size: large;
+	align-self: center;
+	text-align: justify;
+}
+
+.page-intro {
+	font-size: xx-large;
+	text-align: right;
+	padding-right: 10%;
+	align-self: center;
+}
+
+.page-intro h1 {
+	color: var(--primary-color);
+}
+
+.content-block {
+	display: flex;
+}
+
+.page-content .far {
+	padding: 2rem;
+	color: var(--primary-color);
+	opacity: 0.8;
+}
+
+.content-block-data {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+.content-block h3 {
+	border-bottom: 1px solid #000;
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+	font-weight: 500;
+}
+
+.content-block a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+.container.show-nav .main .page-content,
+.container.show-nav .main .page-intro {
+	width: calc(45% - 125px);
+}
+
+/* Footer a tags used for social media names */
+
+.footer a {
+	text-decoration: none;
+	padding: 5px 0;
+	color: #fff;
+}
+
+.footer a:hover {
+	opacity: 0.5;
+}
+
+.footer h2 {
+	border-bottom: 1px solid hsla(0, 0%, 84%, 0.2);
+	line-height: 2rem;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.footer-brand h1 {
+	transition: bottom 0.3s;
+}
+
+.footer-middle,
+.footer-last {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-brand,
+.footer-middle,
+.footer-last,
+.footer-brand::before,
+.footer-middle::before,
+.footer-last::before {
+	transition: all 0.5s ease-in-out;
+}
+
+.footer.show-nav .footer-brand {
+	position: relative;
+	width: 250px;
+	transition: width 0.3s;
+}
+
+.footer.show-nav .footer-brand h1 {
+	position: absolute;
+	bottom: 0;
+	top: auto;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
+
+	.main {
+		flex-direction: column;
+		margin: 7rem 0 0 0;
+		padding: 1%;
+	}
+	.main .page-intro {
+		margin-bottom: 2rem;
+	}
+}
+
+/* Split Window CSS  */
+.split-container h1 {
+	font-size: 4rem;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.split-container .btn {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 50%;
+	top: calc(35% + 6rem);
+	transform: translateX(-50%);
+	text-decoration: none;
+	color: #fff;
+	border: #fff solid 0.2rem;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 15rem;
+	padding: 1.5rem;
+}
+
+.split.left .btn:hover {
+	background-color: var(--secondary-color);
+	border: var(--secondary-color);
+}
+
+.split.right .btn:hover {
+	background-color: var(--primary-color);
+	border: var(--primary-color);
+}
+
+.split-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	transition: all 0.3s linear;
+}
+
+.container.show-nav .split-container {
+	width: calc(100% - 250px);
+	left: 250px;
+	transition: all 0.5s linear;
+}
+
+.container.show-nav .split-container h1 {
+	font-size: 3.5rem;
+	transition: all 0.3s linear;
+}
+
+.container.show-nav .split-container .btn {
+	padding: 1.2rem;
+	width: 12rem;
+}
+
+.split {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.split.left {
+	left: 0;
+	background: url('https://images.unsplash.com/photo-1587385789097-0197a7fbd179?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMDk5OTI2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.split.left::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--primary-color);
+	opacity: 0.7;
+}
+
+.split.right {
+	right: 0;
+	background: url('https://images.unsplash.com/photo-1565787154274-c8d076ad34e7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMDk5OTYy&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.split.right::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--secondary-color);
+	opacity: 0.7;
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+	transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left {
+	width: var(--hover-width);
+}
+
+.hover-left .right {
+	width: var(--other-width);
+}
+
+.hover-right .right {
+	width: var(--hover-width);
+}
+
+.hover-right .left {
+	width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+	.split-container h1 {
+		font-size: 2rem;
+		top: 27%;
+	}
+
+	.split-container .btn {
+		padding: 1.2rem;
+		width: 12rem;
+	}
+}
+
+@media (max-height: 400px) {
+	.split-container h1 {
+		font-size: 1.7rem;
+		top: 15%;
+	}
+
+	.split-container .btn {
+		padding: 1.2rem;
+		width: 12rem;
+	}
+}

@@ -1,0 +1,327 @@
+/*
+***********************************
+-------------Fonts-----------------
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+
+***********************************
+*/
+body {
+	font-family: 'Montserrat';
+	background-color: black;
+}
+h1 {
+	font-family: 'Montserrat';
+	font-size: 3.5rem;
+	font-weight: bold;
+	line-height: 1.5;
+}
+
+h2 {
+	font-family: 'Montserrat';
+	size: 3rem;
+	font-weight: bold;
+	line-height: 1.5;
+}
+h3 {
+	font-family: 'Montserrat';
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+.container-fluid {
+	padding: 3% 15% 7%;
+}
+#title {
+	background-color: #1273b7;
+	color: #fff;
+}
+
+/* Navigation Bar */
+.navbar {
+	padding: 0 0 4.5rem;
+}
+.navbar-brand {
+	font-family: Ubuntu;
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+.nav-item {
+	padding: 0 18px;
+}
+
+.nav-link {
+	font-size: 1.2rem;
+	font-family: 'Montserrat';
+	font-weight: normal;
+}
+
+/* Download Buttons */
+.download-button {
+	margin: 5% 3% 5%;
+}
+/* Title Image */
+.title-img {
+	width: 60%;
+	transform: rotate(25deg);
+	position: absolute;
+	right: 30%;
+}
+@media (max-width: 1028px) {
+	#title {
+		text-align: center;
+	}
+	.title-img {
+		position: static;
+		transform: rotate(0);
+		margin-top: 5%;
+	}
+}
+
+/* Features Section */
+#features {
+	padding: 7% 15%;
+	background-color: #fff;
+	position: relative;
+}
+
+.features-i {
+	color: #0e2433;
+	margin-bottom: 1rem;
+}
+.features-i:hover {
+	color: #001399;
+}
+.features-p {
+	color: #8f8f8f;
+}
+.col-feature {
+	text-align: center;
+	padding: 5%;
+}
+
+/* Testimonial Section */
+#testimonials {
+	text-align: center;
+	background-color: #0e2433;
+	color: #fff;
+}
+
+.testimonial-img {
+	width: 10%;
+	border-radius: 100%;
+	margin: 20px;
+}
+
+/* Press Section */
+#press {
+	background-color: #0e2433;
+	text-align: center;
+	padding-bottom: 3%;
+}
+
+.press-img {
+	width: 15%;
+	margin: 20px 20px 50px;
+}
+
+.carousel-item {
+	padding: 7% 15%;
+}
+
+/* Pricing section */
+
+#pricing {
+	padding: 100px;
+}
+
+/* Card Elements */
+.card-div {
+	padding: 3% 2%;
+	text-align: center;
+}
+
+/* cta Section */
+#cta {
+	background-color: #0e2433;
+	text-align: center;
+	padding: 7% 15%;
+}
+.h3-cta {
+	font-family: 'Montserrat';
+	font-weight: bolder;
+	font-size: 3.5rem;
+	color: #fff;
+}
+.download-btn {
+	margin: 5% 2%;
+}
+
+/* footer Section */
+#footer {
+	padding: 7% 15%;
+	text-align: center;
+	background-color: #fff;
+}
+
+.f-icon {
+	margin: 4.5% 2%;
+}
+
+.copyright {
+	color: #0c314e;
+}
+
+/* Split CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+	--right-bg-color: rgba(255, 255, 0, 0.4);
+	--left-bg-color: rgba(43, 43, 43, 0.8);
+	--right-btn-hover-color: rgba(0, 0, 0, 0.8);
+	--left-btn-hover-color: rgba(255, 255, 0, 0.8);
+	--hover-width: 75%;
+	--other-width: 25%;
+	--speed: 1000ms;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+h1 {
+	font-size: 4rem;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.btn {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 50%;
+	top: 40%;
+	transform: translateX(-50%);
+	text-decoration: none;
+	color: #fff;
+	border: #fff solid 0.2rem;
+	font-size: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 15rem;
+	padding: 1.5rem;
+}
+
+.split.left .btn:hover {
+	background-color: var(--left-btn-hover-color);
+	border: var(--left-btn-hover-color);
+}
+
+.split.right .btn:hover {
+	background-color: var(--right-btn-hover-color);
+	border: var(--right-btn-hover-color);
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #333;
+}
+
+.split {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.split.left {
+	left: 0;
+	background: url('https://images.unsplash.com/photo-1587385789097-0197a7fbd179?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMDk5OTI2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.split.left::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--left-bg-color);
+}
+
+.split.right {
+	right: 0;
+	background: url('https://images.unsplash.com/photo-1565787154274-c8d076ad34e7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMDk5OTYy&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.split.right::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--right-bg-color);
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+	transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left {
+	width: var(--hover-width);
+}
+
+.hover-left .right {
+	width: var(--other-width);
+}
+
+.hover-right .right {
+	width: var(--hover-width);
+}
+
+.hover-right .left {
+	width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+	h1 {
+		font-size: 2rem;
+		top: 27%;
+	}
+
+	.btn {
+		padding: 1.2rem;
+		width: 12rem;
+	}
+}
+
+@media (max-height: 400px) {
+	h1 {
+		font-size: 1.7rem;
+		top: 15%;
+	}
+
+	.btn {
+		padding: 1.2rem;
+		width: 12rem;
+	}
+}
