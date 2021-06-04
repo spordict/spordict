@@ -467,14 +467,21 @@ body {
 	}
 }
 
+.main.live-scores {
+	display: block;
+	text-align: center;
+}
+
 /* Live Score Card CSS */
 .match {
 	text-align: center;
 	width: 60%;
 	margin: 3rem auto;
 	border-radius: 25px;
-	background-color: var(--primary-color);
-	color: #fff;
+	background-color: var(--secondary-color);
+	border: 1px solid var(--primary-color);
+	color: #000;
+	padding: 0.5rem;
 }
 
 .text-span {
