@@ -404,7 +404,6 @@ body {
 
 .split.right {
 	right: 0;
-	/* background: url('https://images.unsplash.com/photo-1565787154274-c8d076ad34e7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMDk5OTYy&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600'); */
 	background: url('/src/img/splitright.png');
 	background-repeat: no-repeat;
 	background-position: center;
