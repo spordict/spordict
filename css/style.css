@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
 :root {
+	/* --primary-color: #064579; */
 	--primary-color: #064579;
 	--secondary-color: #aaccff;
 	/* --right-bg-color: rgba(255, 255, 0, 0.4);
@@ -137,13 +138,17 @@ body {
 }
 
 .brand-name {
-	font-weight: 100;
-	font-size: 16px;
 	padding-right: 40px;
 	position: fixed;
 	top: 1rem;
 	left: auto;
 	right: 5%;
+}
+
+.brand-name a {
+	text-decoration: none;
+	font-size: 32px;
+	font-weight: bold;
 	color: var(--primary-color);
 }
 
@@ -271,10 +276,21 @@ body {
 }
 
 .footer.show-nav .footer-brand h1 {
+	z-index: -1;
+}
+
+.container.show-nav .brand-name {
 	position: fixed;
 	bottom: auto;
 	top: 2rem;
+	left: 2rem;
+	right: auto;
 	z-index: 2;
+	color: #fff;
+}
+
+.container.show-nav .brand-name a {
+	color: #fff;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
