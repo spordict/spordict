@@ -404,7 +404,7 @@ body {
 
 .split.right {
 	right: 0;
-	background: url('/src/img/splitright.png');
+	background: url('https://spordict.github.io/spordict/src/img/splitright.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 70% auto;
