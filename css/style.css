@@ -146,10 +146,14 @@ body {
 }
 
 .brand-name a {
+	color: var(--primary-color);
+}
+
+.brand-name a,
+.nav-brand a {
 	text-decoration: none;
 	font-size: 32px;
 	font-weight: bold;
-	color: var(--primary-color);
 }
 
 /* Footer CSS */
@@ -279,7 +283,8 @@ body {
 	z-index: -1;
 }
 
-.container.show-nav .brand-name {
+.container.show-nav .brand-name,
+.container.show-nav .nav-brand {
 	position: fixed;
 	bottom: auto;
 	top: 2rem;
@@ -289,7 +294,8 @@ body {
 	color: #fff;
 }
 
-.container.show-nav .brand-name a {
+.container.show-nav .brand-name a,
+.container.show-nav .nav-brand a {
 	color: #fff;
 }
 
