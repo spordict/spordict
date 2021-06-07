@@ -2,10 +2,10 @@
 const loadText = document.querySelector('.loading-text')
 const bg = document.querySelector('.bg')
 const splitH1 = document.querySelectorAll('.split-h1')
+var homeCount = 0
 
-let load = 0
-let int = setInterval(blurring, 30)
-
+var load = 0
+var int = setInterval(blurring, 20)
 //Hiding split container h1 tag
 splitH1.forEach((e) => {
 	e.style.display = 'none'
@@ -32,6 +32,7 @@ function blurring() {
 	loadText.style.opacity = scale(load, 0, 100, 1, 0)
 	bg.style.opacity = scale(load, 0, 100, 1, 0)
 	bg.style.filter = `opacity(${scale(load, 0, 100, 30, 0)})`
+	homeCount++
 }
 
 // Navbar Functioning JS
