@@ -29,6 +29,27 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	overflow: hidden;
+}
+
+/* Blurr Loading CSS */
+.bg {
+	position: absolute;
+	background: var(--primary-color);
+	width: 100vw;
+	height: 100vh;
+	filter: blur(0px);
+	z-index: 3;
+}
+
+.loading-text {
+	position: relative;
+	text-align: center;
+	font-size: 50px;
+	color: #fff;
+	z-index: 3;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 /* Additional CSS */

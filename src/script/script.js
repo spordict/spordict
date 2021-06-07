@@ -1,3 +1,39 @@
+// Blurry Loading JS
+const loadText = document.querySelector('.loading-text')
+const bg = document.querySelector('.bg')
+const splitH1 = document.querySelectorAll('.split-h1')
+let load = 0
+
+let int = setInterval(blurring, 30)
+
+//Hiding split container h1 tag
+splitH1.forEach((e) => {
+	e.style.display = 'none'
+})
+// Scale Function
+const scale = (num, in_min, in_max, out_min, out_max) => {
+	return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+}
+// Blurring Function
+function blurring() {
+	load++
+	if (load > 99) {
+		clearInterval(int)
+
+		// Showing split container h1 tag
+		splitH1.forEach((e) => {
+			e.style.display = 'block'
+		})
+		// Removing Blur Background Elements after Blurring
+		bg.remove()
+		loadText.remove()
+	}
+	loadText.innerHTML = `<h1>Spordict</h1><br> Loading... ${load}%`
+	loadText.style.opacity = scale(load, 0, 100, 1, 0)
+	bg.style.opacity = scale(load, 0, 100, 1, 0)
+	bg.style.filter = `opacity(${scale(load, 0, 100, 30, 0)})`
+}
+
 // Navbar Functioning JS
 var navToggle = document.getElementById('nav-toggle')
 var sideNavContainer = document.querySelector('.container')
