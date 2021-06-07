@@ -2,8 +2,8 @@
 const loadText = document.querySelector('.loading-text')
 const bg = document.querySelector('.bg')
 const splitH1 = document.querySelectorAll('.split-h1')
-let load = 0
 
+let load = 0
 let int = setInterval(blurring, 30)
 
 //Hiding split container h1 tag
