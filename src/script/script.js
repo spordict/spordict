@@ -28,7 +28,6 @@ function blurring() {
 		bg.remove()
 		loadText.remove()
 	}
-	loadText.innerHTML = `<h1>Spordict</h1><br> Loading... ${load}%`
 	loadText.style.opacity = scale(load, 0, 100, 1, 0)
 	bg.style.opacity = scale(load, 0, 100, 1, 0)
 	bg.style.filter = `opacity(${scale(load, 0, 100, 30, 0)})`
