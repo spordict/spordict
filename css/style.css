@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
 :root {
-	/* --primary-color: #064579; */
-	--primary-color: #064579;
-	--secondary-color: #aaccff;
+	/* --primary-color: # 064579; */
+	/* --primary-color: # 44318d; */
+	/* Grey silver: #bccbde
+	Lightsaber Blue:#c2dde6
+	Purple: #431c5d
+	Orange: #e05915
+	Yellowbrite: #cdd422 */
+	--primary-color: #112d32;
+	--secondary-color: #30d5c8;
+	--color-on-blue: #88bdbc;
+	/* 
+	--primary-color: #bccbde;
+	--secondary-color: #c2dde6;
+	--color-on-blue: #431c5d; */
+
 	--hover-width: 75%;
 	--other-width: 25%;
 	--speed: 1000ms;
-	--color-on-blue: #75e6da;
 }
 
 * {
@@ -154,7 +165,7 @@ body {
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-	opacity: 0.7;
+	opacity: 0.5;
 }
 
 /* Position and style the close button (top right corner) */
@@ -240,7 +251,6 @@ body {
 	justify-content: space-between;
 	width: 100vw;
 	min-width: 100%;
-
 	/* z-index: 1; */
 	margin-top: auto;
 }
