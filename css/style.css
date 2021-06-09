@@ -4,13 +4,10 @@
 	/* --primary-color: #064579; */
 	--primary-color: #064579;
 	--secondary-color: #aaccff;
-	/* --right-bg-color: rgba(255, 255, 0, 0.4);
-	--left-bg-color: rgba(43, 43, 43, 0.8); */
-	/* --right-btn-hover-color: rgba(0, 0, 0, 0.8);
-	--left-btn-hover-color: rgba(255, 255, 0, 0.8); */
 	--hover-width: 75%;
 	--other-width: 25%;
 	--speed: 1000ms;
+	--color-on-blue: #75e6da;
 }
 
 * {
@@ -28,8 +25,35 @@ body {
 	padding: 0;
 	display: flex;
 	flex-direction: column;
+	flex: 1;
 	height: 100%;
-	overflow: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Google Icons CSS */
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px; /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 }
 
 /* Blurr Loading CSS */
@@ -99,7 +123,7 @@ body {
 	height: 50px;
 	width: 50px;
 	background-color: transparent;
-	color: #fff;
+	color: var(--color-on-blue);
 	border: none;
 	position: absolute;
 }
@@ -123,14 +147,14 @@ body {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 25px;
-	color: #fff;
+	color: var(--color-on-blue);
 	display: block;
 	transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-	color: var(--secondary-color);
+	opacity: 0.7;
 }
 
 /* Position and style the close button (top right corner) */
@@ -212,9 +236,11 @@ body {
 .footer {
 	display: flex;
 	background-color: var(--primary-color);
-	color: #fff;
+	color: var(--color-on-blue);
 	justify-content: space-between;
+	width: 100vw;
 	min-width: 100%;
+
 	/* z-index: 1; */
 	margin-top: auto;
 }
@@ -291,7 +317,7 @@ body {
 .footer a {
 	text-decoration: none;
 	padding: 5px 0;
-	color: #fff;
+	color: var(--color-on-blue);
 }
 
 .footer a:hover {
@@ -342,12 +368,12 @@ body {
 	left: 2rem;
 	right: auto;
 	z-index: 2;
-	color: #fff;
+	color: var(--color-on-blue);
 }
 
 .container.show-nav .brand-name a,
 .container.show-nav .nav-brand a {
-	color: #fff;
+	color: var(--color-on-blue);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -578,11 +604,16 @@ body {
 	color: rgb(0, 0, 130);
 }
 
-/* Media Query Max Width 800px */
-@media (max-width: 800px) {
-	/* .split-container h1 {
+/*Hiding Elements only for Mobile Size Screen or Portrait screen */
+.portrait.material-icons {
+	display: none;
+}
+
+/* Media Query Max Width 1080px */
+@media (max-width: 1080px) {
+	.split-container h1 {
 		font-size: 2rem;
-		top: 27%;
+		top: 40%;
 		overflow-wrap: break-word;
 	}
 
@@ -593,14 +624,14 @@ body {
 	.split-container .btn {
 		padding: 1.2rem;
 		width: 12rem;
-	} */
+	}
 }
 
 /* Media Query Max-Height 400px */
 @media (max-height: 400px) {
-	/* .split-container h1 {
+	.split-container h1 {
 		font-size: 1.7rem;
-		top: 15%;
+		top: 45%;
 	}
 
 	.container.show-nav .split-container h1 {
@@ -610,10 +641,48 @@ body {
 	.split-container .btn {
 		padding: 1.2rem;
 		width: 12rem;
-	} */
+	}
 }
 
 /* Media Query Max Width 400px */
 
 @media (max-width: 400px) {
+	/* Showing elements only for Portrait or Mobile Screens */
+	.portrait.material-icons {
+		display: inline-block;
+	}
+
+	.nav-icons {
+		margin-right: 20px;
+	}
+
+	.container.show-nav .brand-name {
+		font-size: 1.5rem;
+	}
+
+	/* SideNavbar CSS */
+	.container.show-nav .sidenav {
+		width: 100vw;
+		height: 100%;
+		overflow: hidden;
+		padding-top: 7.5rem;
+	}
+
+	.container.show-nav #close {
+		--translate-close: calc(95% + 500px);
+		transform: translateX(100px);
+		left: auto;
+	}
+
+	.container.show-nav .sidenav a {
+		font-size: 2rem;
+	}
+
+	/* Hiding Main Content When Navbar is shown */
+	.container.show-nav .main,
+	.footer.show-nav {
+		opacity: 0;
+		transition: opacity 0.3s linear;
+		display: none;
+	}
 }
