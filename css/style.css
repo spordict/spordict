@@ -1,20 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
 :root {
-	/* --primary-color: # 064579; */
-	/* --primary-color: # 44318d; */
-	/* Grey silver: #bccbde
-	Lightsaber Blue:#c2dde6
-	Purple: #431c5d
-	Orange: #e05915
-	Yellowbrite: #cdd422 */
 	--primary-color: #112d32;
 	--secondary-color: #30d5c8;
-	--color-on-blue: #88bdbc;
-	/* 
-	--primary-color: #bccbde;
-	--secondary-color: #c2dde6;
-	--color-on-blue: #431c5d; */
+	--color-on-blue: #f0ead6;
 
 	--hover-width: 75%;
 	--other-width: 25%;
@@ -37,8 +26,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
-	height: 100%;
+	min-height: 100%;
 	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
 }
 
 /* Google Icons CSS */
@@ -202,6 +192,7 @@ body {
 
 .container.show-nav #close {
 	transform: translateX(0);
+	transform: translateY(1rem);
 }
 
 .container.show-nav .circle {
@@ -229,6 +220,7 @@ body {
 	top: 1rem;
 	left: auto;
 	right: 5%;
+	transition: ease-in 0.3s;
 }
 
 .brand-name a {
@@ -567,6 +559,12 @@ body {
 .match:hover {
 	box-shadow: 2px 5px 20px var(--primary-color);
 	transform: scale(1);
+	background-color: var(--primary-color);
+	color: var(--color-on-blue);
+}
+
+.match:hover .status-s.status-upcoming {
+	color: var(--secondary-color);
 }
 
 .text-span {

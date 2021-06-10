@@ -5,8 +5,9 @@ const splitH1 = document.querySelectorAll('.split-h1')
 var homeCount = 0
 
 var load = 0
-var int = window.setInterval(blurring, 25)
-//Hiding split container h1 tag
+if (loadText != null) {
+	var int = window.setInterval(blurring, 25)
+} //Hiding split container h1 tag
 splitH1.forEach((e) => {
 	e.style.display = 'none'
 })
