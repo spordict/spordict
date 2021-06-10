@@ -67,6 +67,14 @@ if (splitContainer != null) {
 	)
 }
 
+// FAQ Collapse Functioning
+const toggles = document.querySelectorAll('.faq-toggle')
+
+toggles.forEach((toggle) => {
+	toggle.addEventListener('click', () => {
+		toggle.parentNode.classList.toggle('active')
+	})
+})
 // function openNav() {
 // 	document.getElementById('mySidenav').style.width = '250px'
 // 	document.getElementById('main').style.marginLeft = '250px'
