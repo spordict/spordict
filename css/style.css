@@ -743,9 +743,33 @@ body {
 	}
 }
 
-/* Media Query Max Width 400px */
+/* Media Query Max Width 600px */
+@media (max-width: 600px) {
+	/* Live Score Banner CSS */
+	.match {
+		width: 85%;
+	}
+	.score-s {
+		margin-top: 0.3rem;
+		text-align: left;
+	}
+	.status-match {
+		text-align: left;
+		font-weight: 900;
+	}
+	.match .row {
+		flex-direction: column;
+	}
 
-@media (max-width: 400px) {
+	.location-s {
+		font-size: 80%;
+		text-align: left;
+	}
+}
+
+/* Media Query Max Width 480px */
+
+@media (max-width: 480px) {
 	/* Showing elements only for Portrait or Mobile Screens */
 	.portrait.material-icons {
 		display: inline-block;
@@ -819,6 +843,7 @@ body {
 		text-align: justify;
 		padding-left: 9%;
 		padding-right: 3%;
+		padding-bottom: 5rem;
 	}
 	.fa-envelope {
 		font-size: 100;
@@ -840,27 +865,6 @@ body {
 	.footer-middle,
 	.footer-last {
 		width: 100%;
-		text-align: left;
-	}
-
-	/* Live Score Banner CSS */
-	.match {
-		width: 85%;
-	}
-	.score-s {
-		margin-top: 0.3rem;
-		text-align: left;
-	}
-	.status-match {
-		text-align: left;
-		font-weight: 900;
-	}
-	.match .row {
-		flex-direction: column;
-	}
-
-	.location-s {
-		font-size: 80%;
 		text-align: left;
 	}
 }
