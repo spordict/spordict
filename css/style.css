@@ -223,6 +223,7 @@ body {
 	left: auto;
 	right: 5%;
 	transition: ease-in 0.3s;
+	z-index: 2;
 }
 
 .brand-name a {
@@ -260,6 +261,10 @@ body {
 
 .main .page-intro {
 	width: 30%;
+	font-size: xx-large;
+	text-align: right;
+	padding-right: 2%;
+	align-self: center;
 }
 .main .page-content {
 	width: 35%;
@@ -270,13 +275,6 @@ body {
 	font-size: large;
 	align-self: center;
 	text-align: justify;
-}
-
-.page-intro {
-	font-size: xx-large;
-	text-align: right;
-	padding-right: 10%;
-	align-self: center;
 }
 
 .page-intro h1 {
@@ -623,7 +621,8 @@ body {
 }
 
 /*Hiding Elements only for Mobile Size Screen or Portrait screen */
-.portrait.material-icons {
+.portrait.material-icons,
+.portrait.top-bar {
 	display: none;
 }
 
@@ -654,19 +653,6 @@ body {
 	box-shadow: 2px 5px 20px var(--primary-color);
 	color: var(--color-on-blue);
 }
-
-/* .faq.active::before,
-.faq.active::after {
-	content: '\f075';
-	font-family: 'Font Awesome 5 Free';
-	color: #fff;
-	font-size: 7rem;
-	position: absolute;
-	opacity: 0.2;
-	top: 20px;
-	left: 20px;
-	z-index: 0;
-} */
 
 .faq.active::before {
 	color: var(--color-on-blue);
@@ -769,6 +755,20 @@ body {
 		display: inline-block;
 	}
 
+	/* Top Bar For Brand scrolling */
+	.portrait.top-bar {
+		display: block;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 4.5rem;
+		background-color: var(--primary-color);
+		z-index: 1;
+	}
+
+	.container.show-nav .portrait.top-bar {
+		display: none;
+	}
 	.nav-icons {
 		margin-right: 20px;
 	}
@@ -785,21 +785,55 @@ body {
 		padding-top: 7.5rem;
 	}
 
-	.container.show-nav #close {
-		--translate-close: calc(95% + 500px);
+	.container.show-nav .circle-container {
 		transform: translateX(100px);
 		left: auto;
 	}
 
 	.container.show-nav .sidenav a {
-		font-size: 2rem;
+		font-size: 1.5rem;
+	}
+	/* Brand Name CSS */
+	.brand-name {
+		padding-right: 10px;
+		color: var(--color-on-blue);
 	}
 
+	/* Main content CSS */
+
+	.main .page-intro,
+	.page-intro h1 {
+		width: 90%;
+		padding-left: 9%;
+		text-align: left;
+		font-size: 2rem;
+	}
+	.main .page-content {
+		width: 90%;
+		text-align: justify;
+		padding-left: 9%;
+		padding-right: 3%;
+	}
+	.fa-envelope {
+		font-size: 100;
+	}
 	/* Hiding Main Content When Navbar is shown */
 	.container.show-nav .main,
 	.footer.show-nav {
 		opacity: 0;
 		transition: opacity 0.3s linear;
 		display: none;
+	}
+
+	/* Footer CSS */
+	.footer {
+		flex-direction: column;
+		padding-left: 5%;
+	}
+	.footer-brand,
+	.footer-middle,
+	.footer-last {
+		width: 100%;
+		text-align: left;
 	}
 }

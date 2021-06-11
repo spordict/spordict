@@ -7,18 +7,14 @@ var homeCount = 0
 var load = 0
 if (loadText != null) {
 	var int = window.setInterval(blurring, 25)
-}
-
-//Hiding split container h1 tag
+} //Hiding split container h1 tag
 splitH1.forEach((e) => {
 	e.style.display = 'none'
 })
-
 // Scale Function
 const scale = (num, in_min, in_max, out_min, out_max) => {
 	return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
 }
-
 // Blurring Function
 function blurring() {
 	load++
@@ -75,13 +71,8 @@ if (splitContainer != null) {
 const toggles = document.querySelectorAll('.faq-toggle')
 const faqs = document.querySelectorAll('.faq')
 
-if (toggles != null && faqs != null) {
-	faqs.forEach((faq, index) => {
-		faqs[index].addEventListener('click', () => {
-			faq.classList.toggle('active')
-		})
-		toggles[index].addEventListener('click', () => {
-			toggle.parentNode.classList.toggle('active')
-		})
+faqs.forEach((faq, idx) => {
+	faq.addEventListener('click', () => {
+		faq.classList.toggle('active')
 	})
-}
+})
