@@ -7,14 +7,18 @@ var homeCount = 0
 var load = 0
 if (loadText != null) {
 	var int = window.setInterval(blurring, 25)
-} //Hiding split container h1 tag
+}
+
+//Hiding split container h1 tag
 splitH1.forEach((e) => {
 	e.style.display = 'none'
 })
+
 // Scale Function
 const scale = (num, in_min, in_max, out_min, out_max) => {
 	return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
 }
+
 // Blurring Function
 function blurring() {
 	load++
@@ -69,19 +73,15 @@ if (splitContainer != null) {
 
 // FAQ Collapse Functioning
 const toggles = document.querySelectorAll('.faq-toggle')
+const faqs = document.querySelectorAll('.faq')
 
-toggles.forEach((toggle) => {
-	toggle.addEventListener('click', () => {
-		toggle.parentNode.classList.toggle('active')
+if (toggles != null && faqs != null) {
+	faqs.forEach((faq, index) => {
+		faqs[index].addEventListener('click', () => {
+			faq.classList.toggle('active')
+		})
+		toggles[index].addEventListener('click', () => {
+			toggle.parentNode.classList.toggle('active')
+		})
 	})
-})
-// function openNav() {
-// 	document.getElementById('mySidenav').style.width = '250px'
-// 	document.getElementById('main').style.marginLeft = '250px'
-// }
-
-// /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-// function closeNav() {
-// 	document.getElementById('mySidenav').style.width = '0'
-// 	document.getElementById('main').style.marginLeft = '0'
-// }
+}
