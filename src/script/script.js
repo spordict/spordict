@@ -2,7 +2,6 @@
 const loadText = document.querySelector('.loading-text')
 const bg = document.querySelector('.bg')
 const splitH1 = document.querySelectorAll('.split-h1')
-var homeCount = 0
 
 var load = 0
 if (loadText != null) {
@@ -47,7 +46,6 @@ navToggle.addEventListener('click', () => {
 })
 
 //Split CSS functioning
-
 const splitLeft = document.querySelector('.left')
 const splitRight = document.querySelector('.right')
 const splitContainer = document.querySelector('.split-container')

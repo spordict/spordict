@@ -867,4 +867,85 @@ body {
 		width: 100%;
 		text-align: left;
 	}
+
+	.loading-text {
+		font-size: 16px;
+	}
+
+	/* Split Container CSS for small Screens */
+	.split-container {
+		all: initial;
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top: 0;
+		left: 0;
+		text-align: center;
+		background-color: #112d32;
+	}
+	.split-container h1 {
+		all: initial;
+		color: #fff;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 3rem;
+		margin-top: 15%;
+		text-align: center;
+	}
+
+	.split-container .btn {
+		all: initial;
+		background: none;
+		color: #fff;
+		text-align: center;
+		background-color: #112d32;
+		color: var(--color-on-blue);
+		border: #fff solid 0.2rem;
+		font-size: 1rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		width: 15rem;
+		padding: 1.5rem 1rem;
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.split.left .btn:hover {
+		all: initial;
+		text-align: center;
+		background-color: #112d32;
+		color: var(--color-on-blue);
+	}
+
+	.split.right .btn:hover {
+		all: initial;
+		text-align: center;
+		background-color: #112d32;
+		color: var(--color-on-blue);
+	}
+
+	.split.left::before {
+		all: initial;
+		text-align: center;
+	}
+
+	.split.right {
+		all: initial;
+		text-align: center;
+	}
+
+	.split.right::before {
+		all: initial;
+		text-align: center;
+	}
+
+	.split {
+		all: initial;
+		position: relative;
+		background: none;
+		height: 50vh;
+		width: 100%;
+		background: #333;
+		text-align: center;
+	}
 }
