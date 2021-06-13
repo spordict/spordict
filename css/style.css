@@ -402,84 +402,41 @@ body {
 }
 
 /* Split Window CSS  */
-.split-container h1 {
-	font-size: 4rem;
-	color: #fff;
-	position: absolute;
-	left: 50%;
-	top: 35%;
-	transform: translateX(-50%);
-	white-space: nowrap;
-}
-
-.split-container .btn {
-	position: absolute;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	left: 50%;
-	top: calc(35% + 6rem);
-	transform: translateX(-50%);
-	text-decoration: none;
-	color: #fff;
-	border: #fff solid 0.2rem;
-	font-size: 1rem;
-	font-weight: bold;
-	text-transform: uppercase;
-	width: 15rem;
-	padding: 1.5rem;
-}
-
-.split.left .btn:hover {
-	background-color: var(--secondary-color);
-	border: var(--secondary-color);
-}
-
-.split.right .btn:hover {
-	background-color: var(--primary-color);
-	border: var(--primary-color);
-}
-
 .split-container {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Mulish', sans-serif;
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #333;
+	font-size: 1.5rem;
+	inset: 0;
+	background-color: #000;
+	overflow: hidden;
 	transition: all 0.3s linear;
 }
 
-.container.show-nav .split-container {
-	width: calc(100% - 250px);
-	left: 250px;
-	transition: all 0.5s linear;
-}
-
-.container.show-nav .split-container h1 {
-	font-size: 3.5rem;
-	transition: all 0.3s linear;
-}
-
-.container.show-nav .split-container .btn {
-	padding: 1.2rem;
-	width: 12rem;
+.split-container h1,
+.split-container .btn {
+	z-index: 3;
 }
 
 .split {
-	position: absolute;
 	width: 50%;
-	height: 100%;
-	overflow: hidden;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
 }
 
 .split.left {
-	left: 0;
+	height: 100%;
 	background: url('https://images.unsplash.com/photo-1587385789097-0197a7fbd179?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxhbGx8fHx8fHx8fHwxNjIwMDk5OTI2&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 125% auto;
 	background-color: #000;
+	transition: background-color var(--speed) linear;
 }
 
 .split.left::before {
@@ -487,68 +444,96 @@ body {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background-color: var(--secondary-color);
-	opacity: 0.3;
+	background-color: var(--primary-color);
+	opacity: 0.6;
 }
 
 .split.right {
-	right: 0;
+	height: 100%;
 	background: url('../src/img/splitright.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 70% auto;
 	background-color: #000;
-	overflow-wrap: break-word;
 }
 
 .split.right::before {
 	content: '';
 	position: absolute;
+	background-color: var(--secondary-color);
+	opacity: 0.2;
 	width: 100%;
 	height: 100%;
+}
+
+.split-container .btn {
+	width: 30%;
+	padding: 1rem;
+	text-decoration: none;
+	margin: 1rem auto;
+	text-transform: capitalize;
+}
+
+.right .btn,
+.left .btn {
+	border: 0.2rem solid #fff;
+	color: #fff;
+}
+
+.right .btn:hover,
+.left .btn:hover {
 	background-color: var(--primary-color);
-	opacity: 0.5;
+	color: #fff;
+	border: none;
 }
 
-.container.show-nav .split.right::before {
-	background-color: var(--secondary-color);
-	opacity: 0.5;
+/* When Sidenav is shown */
+.container.show-nav .split-container {
+	left: 250px;
+	width: calc(100% - 250px);
+	transition: left 0.4s linear;
 }
 
-.container.show-nav .split.left::before {
-	background-color: var(--primary-color);
-	opacity: 0.7;
+.container.show-nav .split.right {
+	height: 100%;
+	transition: background-color var(--speed) linear;
+	transition: width 1000ms ease-in-out;
 }
 
-.split.right,
-.split.left,
-.split.right::before,
-.split.left::before {
-	transition: all var(--speed) ease-in-out;
+.container.show-nav .split.left {
+	height: 100%;
+	transition: background-color var(--speed) linear;
+	transition: width 1000ms ease-in-out;
 }
 
-.hover-left .left {
+/* Adding Hover Effect for changing width */
+/* On Left Hover */
+.hover-left .split.left {
 	width: var(--hover-width);
+	transition: width 1000ms ease-in-out;
 }
-
-.hover-left .right {
+.hover-left .split.right {
 	width: var(--other-width);
+	transition: width 1000ms ease-in-out;
 }
 
-.hover-right .right {
+/* On Right Hover */
+.hover-right .split.right {
 	width: var(--hover-width);
+	transition: width 1000ms ease-in-out;
 }
 
-.hover-right .left {
+.hover-right .split.left {
 	width: var(--other-width);
+	transition: width 1000ms ease-in-out;
 }
 
+/* Live Score Card CSS */
 .main.live-scores {
 	display: block;
 	text-align: center;
 }
 
-/* Live Score Card CSS */
 .match {
 	text-align: center;
 	width: 60%;
@@ -873,79 +858,27 @@ body {
 	}
 
 	/* Split Container CSS for small Screens */
+
 	.split-container {
-		all: initial;
-		width: 100%;
-		height: 100vh;
-		position: absolute;
-		display: flex;
 		flex-direction: column;
-		top: 0;
-		left: 0;
-		text-align: center;
-		background-color: #112d32;
+		font-size: 20px;
 	}
-	.split-container h1 {
-		all: initial;
-		color: #fff;
-		font-family: 'Montserrat', sans-serif;
-		font-size: 3rem;
-		margin-top: 15%;
-		text-align: center;
-	}
-
-	.split-container .btn {
-		all: initial;
-		background: none;
-		color: #fff;
-		text-align: center;
-		background-color: #112d32;
-		color: var(--color-on-blue);
-		border: #fff solid 0.2rem;
-		font-size: 1rem;
-		font-weight: bold;
-		text-transform: uppercase;
-		width: 15rem;
-		padding: 1.5rem 1rem;
-		font-family: 'Montserrat', sans-serif;
-	}
-
-	.split.left .btn:hover {
-		all: initial;
-		text-align: center;
-		background-color: #112d32;
-		color: var(--color-on-blue);
-	}
-
-	.split.right .btn:hover {
-		all: initial;
-		text-align: center;
-		background-color: #112d32;
-		color: var(--color-on-blue);
-	}
-
-	.split.left::before {
-		all: initial;
-		text-align: center;
-	}
-
-	.split.right {
-		all: initial;
-		text-align: center;
-	}
-
-	.split.right::before {
-		all: initial;
-		text-align: center;
-	}
-
 	.split {
-		all: initial;
-		position: relative;
-		background: none;
-		height: 50vh;
 		width: 100%;
-		background: #333;
-		text-align: center;
+		height: 50vh;
+	}
+	.hover-right .split.left,
+	.hover-right .split.right,
+	.hover-left .split.right,
+	.hover-left .split.left {
+		width: 100%;
+	}
+
+	.split.left::before,
+	.split.right::before {
+		height: 50%;
+	}
+	.split.right::before {
+		top: 50%;
 	}
 }
