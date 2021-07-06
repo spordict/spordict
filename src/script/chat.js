@@ -35,13 +35,14 @@ var ref = firebase.database().ref('Chats');
     var chatWindow = document.querySelector('.commentList')
     chatWindow.scrollTop = chatWindow.scrollHeight;
     var Message = document.getElementById("mess").value;
-
+    document.getElementById("mess").value = '';
+    
     var OrderNo = new Date().toString();
     firebase.database().ref('Chats/'+OrderNo).set({
         time: OrderNo,
         message: Message
       });
-      
+   
   }
 
   function deleteChat(){
