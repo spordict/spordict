@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 .chat-box.pop-up{
     width: 20%;
     position: fixed;
@@ -13,6 +12,8 @@
     bottom: calc(2rem + 55px);
     background-color: #fff;
     border: 1px solid var(--primary-color);
+    border-radius: 15px;
+
 }
 
 
@@ -60,6 +61,7 @@
     background-color: var(--primary-color);
     height: 3rem;
     display: flex;
+    border-radius: 15px 15px 0 0;
 }
 .pop-up .titleBox label{
     color: var(--color-on-blue);
@@ -144,4 +146,11 @@
 .pop-circle button:hover{
     background-color: var(--primary-color);
     color: var(--color-on-blue);
+}
+
+
+@media (max-width: 400px) {
+    .chat-box.pop-up{
+        width: 70%;
+    }
 }
