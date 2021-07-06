@@ -601,6 +601,43 @@ body {
 	color: rgb(0, 0, 130);
 }
 
+/* Prediction Banner CSS */
+.pre-teams {
+	display: flex;
+	justify-content: space-around;
+}
+
+.pre-match {
+	color: #000;
+	text-align: center;
+	width: 60%;
+	margin: 3rem auto;
+	border-radius: 25px;
+	border: 3px solid var(--primary-color);
+	transform: scale(0.99);
+	padding: 0.5rem;
+}
+.pre-teams {
+	font-size: 2rem;
+	font-weight: 900;
+	padding: 1rem 0.5rem;
+}
+.vs {
+	padding: 1rem;
+}
+.prediction {
+	padding-top: 1rem;
+}
+
+.percentage {
+	display: flex;
+	justify-content: center;
+	content: '70%';
+	background-color: yellow;
+	opacity: 0.5;
+	height: 0.2rem;
+}
+
 /*Hiding Elements only for Mobile Size Screen or Portrait screen */
 .portrait.material-icons,
 .portrait.top-bar {
