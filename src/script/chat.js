@@ -48,3 +48,24 @@ var ref = firebase.database().ref('Chats');
     ref.remove();
     location.reload()
   }
+
+
+
+
+document.getElementById("mess").addEventListener("keyup", function(e){
+  if(e.key === 'Enter'){
+    add();
+  }
+});
+
+var chatBoxContainer = document.getElementById("chat-box-id")
+var popCloseButton = document.getElementById("pop-close")
+var popOpenButton = document.getElementById("pop-open")
+ 
+function openChat(){
+  chatBoxContainer.classList.remove("pop-up-close")
+}
+
+function closeChat(){
+  chatBoxContainer.classList.add("pop-up-close")
+}

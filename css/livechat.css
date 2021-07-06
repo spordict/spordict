@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.chat-box.pop-up{
+    width: 20%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 2rem;
+    bottom: calc(2rem + 55px);
+    background-color: #fff;
+    border: 1px solid var(--primary-color);
+}
+
+
+.send-button{
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    margin-top: 1rem;
+    word-wrap: nowrap;
+    width: 50%;
+    min-width: 6rem;
+    
+}
+
+.send-button:hover{
+    background-color: var(--primary-color);
+    color: var(--color-on-blue);
+}
+
+.send-button:focus{
+    outline: none;
+    transform: scale(0.98);
+}
+
+.form-control{
+    height: 2rem;
+    width: 95%;
+}
+
+.form-control:focus{
+    outline: none;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    align-items: center;
+
+}
+
+.pop-up .titleBox{
+    background-color: var(--primary-color);
+    height: 3rem;
+    display: flex;
+}
+.pop-up .titleBox label{
+    color: var(--color-on-blue);
+    font-weight: 900;
+    padding: 1rem;
+    align-self: center;
+}
+
+.commentText{
+    display: flex;
+    flex-direction: column;
+}
+
+.commentList{
+    list-style: none;
+    max-height: 200px;
+    overflow-y: scroll;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.sub-text{
+    font-size: 0.5rem;
+    color: #aaa;
+}
+
+.commentBox{
+    display: flex;
+    height: 3rem;
+    background-color: #eee;
+    border-bottom: var(--primary-color);
+}
+
+.taskDescription{
+    align-self: center;
+    margin-left: 1rem;
+}
+
+/* Toggle CSS */
+
+
+.chat-box.pop-up-close #pop-close,
+.chat-box.pop-up-close .detailBox{
+    display: none;
+} 
+
+.chat-box.pop-up-close #pop-open{
+    display: block;
+}
+
+#pop-open{
+    display: none;
+}
+
+.chat-box.pop-up-close{
+    border: none;
+}
+
+
+.pop-circle{
+    width: 50px;
+    height: 50px;   
+    border-radius: 50%;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.pop-circle button{
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #075E54;
+    color: #fff;
+}
+
+.pop-circle button{
+    cursor: pointer;
+}
+
+.pop-circle button:hover{
+    background-color: var(--primary-color);
+    color: var(--color-on-blue);
+}
