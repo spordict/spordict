@@ -8,6 +8,14 @@
 	--hover-width: 75%;
 	--other-width: 25%;
 	--speed: 1000ms;
+	--csk: #ffff3c80;
+	--kkr: #2E085480;
+	--rcb: #E6332980;
+	--rr: #e7389580;
+	--pbks:#ED1B2480 ;
+	--srh: #FF822A80;
+	--mi: #004f9180;
+	--dc: #2561AE80;
 }
 
 * {
@@ -629,14 +637,51 @@ body {
 	padding-top: 1rem;
 }
 
+/* Percentage Bar */
+
 .percentage {
+	text-align: center;
 	display: flex;
 	justify-content: center;
-	content: '70%';
-	background-color: yellow;
-	opacity: 0.5;
-	height: 0.2rem;
+	height: 4em;
+	width: 70%;
+	margin: 0 auto;
 }
+
+.team-first-percentage{
+	align-self: center;
+	font-size: 1rem;
+	border-radius: 25px 0 0 25px;
+	padding: 0.5rem 0;
+	color: #000;
+}
+
+.pre-team{
+	position: relative;
+}
+
+.pre-team img{
+	position: absolute;
+	/* width: auto; */
+	opacity: 0.3;
+	z-index: -1;
+}
+
+.pre-team.pre-team-left img{
+	left: 0;
+}
+.pre-team.pre-team-right img{
+	right: 0;
+}
+
+.team-second-percentage{
+	align-self: center;
+	font-size: 1rem;
+	border-radius: 0 25px 25px 0;
+	color: #fff;
+	padding: 0.5rem 0;
+}
+
 
 /*Hiding Elements only for Mobile Size Screen or Portrait screen */
 .portrait.material-icons,
